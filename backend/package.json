@@ -1,0 +1,28 @@
+{
+  "name": "task-management-backend",
+  "version": "1.0.0",
+  "description": "Backend for a simple task management application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "task",
+    "management",
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
+  "type": "module",
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1"
+  }
+}
