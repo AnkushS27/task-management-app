@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import errorMiddleware from "./middleware/errorMiddleware.js";
 import morgan from "morgan";
+import taskRoutes from "./routes/taskRoutes.js";
 
 // Load environment variables
 dotenv.config();
@@ -20,6 +21,9 @@ app.use(express.urlencoded({ extended: false }));
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
+
+// Routes
+app.use('/api/tasks', taskRoutes)
 
 // Default route
 app.get("/", (req, res) => {
