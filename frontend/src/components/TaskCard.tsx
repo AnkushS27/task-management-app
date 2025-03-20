@@ -29,21 +29,21 @@ export default function TaskCard({ task, onStatusChange, onDelete, onEdit, onVie
         <div className="flex space-x-2">
           <button
             onClick={() => onView(task)}
-            className="text-gray-400 hover:text-blue-500"
+            className="text-gray-400 hover:text-blue-500 cursor-pointer"
             title="View Details"
           >
             <Eye className="h-5 w-5" />
           </button>
           <button
             onClick={() => onEdit(task)}
-            className="text-gray-400 hover:text-blue-500"
+            className="text-gray-400 hover:text-blue-500 cursor-pointer"
             title="Edit Task"
           >
             <Edit className="h-5 w-5" />
           </button>
           <button
             onClick={() => onDelete(task._id)}
-            className="text-gray-400 hover:text-red-500"
+            className="text-gray-400 hover:text-red-500 cursor-pointer"
             title="Delete Task"
           >
             <Trash2 className="h-5 w-5" />
@@ -70,7 +70,7 @@ export default function TaskCard({ task, onStatusChange, onDelete, onEdit, onVie
 
         <button
           onClick={() => onStatusChange(task._id)}
-          className={`flex items-center space-x-1 px-3 py-1 rounded-full text-sm ${
+          className={`flex items-center space-x-1 px-3 py-1 rounded-full text-sm cursor-pointer ${
             task.status === 'completed'
               ? 'bg-green-100 text-green-800'
               : 'bg-gray-100 text-gray-800'
