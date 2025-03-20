@@ -4,6 +4,7 @@ import connectDB from "./config/db.js";
 import errorMiddleware from "./middleware/errorMiddleware.js";
 import morgan from "morgan";
 import taskRoutes from "./routes/taskRoutes.js";
+import cors from "cors";
 
 // Load environment variables
 dotenv.config();
@@ -16,6 +17,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 
 // Logging in development mode
 if (process.env.NODE_ENV === "development") {
